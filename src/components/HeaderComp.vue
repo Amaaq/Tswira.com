@@ -1,5 +1,5 @@
 <template>
-    <header class="px-5 h-16 flex items-center justify-between bg-lime-300 border-b-2 border-lime-700">
+    <header class="px-5 h-16 flex items-center justify-between bg-lime-300 border-b-2 border-lime-800">
         <HeaderCompHam @click="toggleMenuDisplay" class="cursor-pointer md:hidden"/>
         <HeaderCompLogo class="md:mr-4 lg:mr-8"/>
         <HeaderCompNav @toggleMenuDisplay="toggleMenuDisplay" v-show="menuDisplayed"/>
@@ -16,7 +16,9 @@ import HeaderCompNav from '@/components/HeaderCompNav.vue';
 import { ref,onMounted } from 'vue';
 let menuDisplayed = ref(window.innerWidth>600)
 let toggleMenuDisplay = ()=>{
-    menuDisplayed.value= !menuDisplayed.value;
+    if(window.innerWidth<600){
+        menuDisplayed.value= !menuDisplayed.value;
+    }
 }
 onMounted(()=>{
 

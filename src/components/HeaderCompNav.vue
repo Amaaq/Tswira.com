@@ -7,16 +7,21 @@
             <ul class="clear-right flex flex-col items-stretch justify-center text-center text-lime-100
             border-t-2 border-lime-100 md:flex-row md:border-none md:text-left md:gap-5 md:text-lime-800 
              md:font-extrabold md:items-end md:h-full">
-                <li class="p-5 border-b-2 border-lime-100 uppercase font-semibold tracking-widest cursor-pointer hover:text-lime-300
-                 md:p-3 md:hover:border-lime-800 md:hover:border-b-2 md:border-transparent  md:hover:text-lime-800">Home</li>
-                <li class="p-5 border-b-2 border-lime-100 uppercase font-semibold tracking-widest cursor-pointer hover:text-lime-300
-                 md:p-3 md:hover:border-lime-800 md:hover:border-b-2 md:border-transparent md:hover:text-lime-800">Categories</li>
-                <li class="p-5 border-b-2 border-lime-100 uppercase font-semibold tracking-widest cursor-pointer hover:text-lime-300
-                 md:p-3 md:hover:border-lime-800 md:hover:border-b-2 md:border-transparent md:hover:text-lime-800">Products</li>
-                <li class="p-5 border-b-2 border-lime-100 uppercase font-semibold tracking-widest cursor-pointer hover:text-lime-300
-                 md:p-3 md:hover:border-lime-800 md:hover:border-b-2 md:border-transparent md:hover:text-lime-800">About</li>
-                <li class="p-5 border-b-2 border-lime-100 uppercase font-semibold tracking-widest cursor-pointer hover:text-lime-300
-                 md:p-3 md:hover:border-lime-800 md:hover:border-b-2 md:border-transparent md:hover:text-lime-800">Contact</li>
+                <RouterLink @click="$emit('toggleMenuDisplay')" :to="'/'" 
+                class="p-5 border-b-2 border-lime-100 uppercase font-semibold tracking-widest cursor-pointer hover:text-lime-300
+                 md:p-3 md:hover:border-lime-800  md:border-transparent  md:hover:text-lime-800">Home</RouterLink>
+                <RouterLink :to="'/categories'" 
+                class="p-5 border-b-2 border-lime-100 uppercase font-semibold tracking-widest cursor-pointer hover:text-lime-300
+                 md:p-3 md:hover:border-lime-800  md:border-transparent md:hover:text-lime-800">Categories</RouterLink>
+                <RouterLink :to="'/products'" 
+                class="p-5 border-b-2 border-lime-100 uppercase font-semibold tracking-widest cursor-pointer hover:text-lime-300
+                 md:p-3 md:hover:border-lime-800  md:border-transparent md:hover:text-lime-800">Products</RouterLink>
+                <RouterLink :to="'/about'" 
+                class="p-5 border-b-2 border-lime-100 uppercase font-semibold tracking-widest cursor-pointer hover:text-lime-300
+                 md:p-3 md:hover:border-lime-800  md:border-transparent md:hover:text-lime-800">About</RouterLink>
+                <RouterLink :to="'/contact'" 
+                class="p-5 border-b-2 border-lime-100 uppercase font-semibold tracking-widest cursor-pointer hover:text-lime-300
+                 md:p-3 md:hover:border-lime-800  md:border-transparent md:hover:text-lime-800">Contact</RouterLink>
             </ul>
         </nav>
     </Transition>

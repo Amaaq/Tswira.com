@@ -1,13 +1,12 @@
 <template>
   <HeaderComp />
-  <div></div>
+  <RouterView/>
 </template>
 
 <script setup>
 import HeaderComp from './components/HeaderComp.vue';
-
-
-</script>
+import {RouterView} from 'vue-router'
+ </script>
 <style>
 @tailwind base;
 @tailwind components;
