@@ -19,7 +19,7 @@ import HeaderComp from './components/HeaderComp.vue';
   margin: 0;
   font-size: 12px;
 }
-@media (min-width:780px){
+@media (min-width:850px){
   * {
     font-size: 16px;
   }
