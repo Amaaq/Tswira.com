@@ -7,12 +7,24 @@ export const routes = [
         component: HomeView
     },
     { 
+        path: '/home', 
+        redirect: '/' 
+    },
+    { 
         path: '/categories',
-        component: ()=> import('./Views/CategoriesView.vue')
+        component: ()=> import('./Views/CategoriesView.vue'),
+        children:[{
+                path: ':category',
+                component:()=>import('@/Views/CategoryChildView.vue'),
+            }]
     },
     { 
         path: '/products',
-        component: ()=> import('./Views/ProductsView.vue')
+        component: ()=> import('./Views/ProductsView.vue'),
+        children:[{
+            path: ':product',
+            component:()=>import('@/Views/ProductChildView.vue'),
+        }]
     },
     { 
         path: '/about',
