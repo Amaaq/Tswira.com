@@ -1,6 +1,6 @@
 <template>
   <HeaderComp />
-  <RouterView class="h-full flex items-center justify-center"/>
+  <RouterView class=" flex items-center justify-center"/>
 </template>
 
 <script setup>
@@ -11,18 +11,16 @@ import {RouterView} from 'vue-router'
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body {
+#app {
   overflow-x: hidden;
   /* background-color: #d9f99d; */
   /* background-color: rgb(248, 235, 230); */
-  background-image: url('../assets/bg-image.png');
+  background-image: url('../assets/bg-image1.jpg');
   background-size:cover;
   background-repeat: no-repeat;
   min-height: 100vh;
 }
-#app {
-  min-height: 80vh;
-}
+
 h1 {
   min-height: inherit;
   font-weight: bolder;
@@ -33,6 +31,7 @@ h1 {
   padding: 0;
   margin: 0;
   font-size: 12px;
+  color: #3f6212;
 }
 @media (min-width:850px){
   * {

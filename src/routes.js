@@ -33,5 +33,9 @@ export const routes = [
     { 
         path: '/contact',
         component: ()=> import('./Views/ContactView.vue')
-    }
+    },
+    { 
+        path: '/login',
+        component: ()=> import('./Views/LoginView.vue')
+    },
 ]
