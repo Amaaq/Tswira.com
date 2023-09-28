@@ -13,7 +13,11 @@ import {RouterView} from 'vue-router'
 @tailwind utilities;
 body {
   overflow-x: hidden;
-  background-color: #d9f99d;
+  /* background-color: #d9f99d; */
+  /* background-color: rgb(248, 235, 230); */
+  background-image: url('../assets/bg-image.png');
+  background-size:cover;
+  background-repeat: no-repeat;
   min-height: 100vh;
 }
 #app {

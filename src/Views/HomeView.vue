@@ -1,6 +1,8 @@
 <template>
     <h1>
-        HOME PAGE
+        <div class="h-32 w-full bg-lime-50">
+
+        </div>
     </h1>
 </template>
 
