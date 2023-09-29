@@ -1,6 +1,8 @@
 <template>
   <HeaderComp />
-  <RouterView class=" flex items-center justify-center"/>
+  <Transition name="view">
+    <RouterView class=" flex items-center justify-center"/>
+  </Transition>
 </template>
 
 <script setup>
@@ -8,6 +10,7 @@ import HeaderComp from './components/HeaderComp.vue';
 import {RouterView} from 'vue-router'
  </script>
 <style>
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,7 +18,7 @@ import {RouterView} from 'vue-router'
   overflow-x: hidden;
   /* background-color: #d9f99d; */
   /* background-color: rgb(248, 235, 230); */
-  background-image: url('../assets/bg-image1.jpg');
+  background-image: url('../assets/bg-image.jpg');
   background-size:cover;
   background-repeat: no-repeat;
   min-height: 100vh;
@@ -32,6 +35,12 @@ h1 {
   margin: 0;
   font-size: 12px;
   color: #3f6212;
+}
+.view-enter-from,.view-leave-to{
+  transform: translateX(100%);
+}
+.view-enter-active,.view-leave-active{
+  transition: all ease 0.3s;
 }
 @media (min-width:850px){
   * {

@@ -1,5 +1,5 @@
 <template>
-    <header class="px-5 h-16 flex items-center justify-between bg-opacity-70 bg-lime-300 border-b-2 border-lime-600">
+    <header class="absolute top-0 w-full px-5 h-16 flex items-center justify-between bg-yellow-50 border-b-2 border-lime-600">
         <HeaderCompHam @click="toggleMenuDisplay" class="cursor-pointer md:hidden"/>
         <HeaderCompLogo class="md:mr-4 lg:mr-12"/>
         <HeaderCompNav @toggleMenuDisplay="toggleMenuDisplay" v-show="menuDisplayed" :menuDisplayed="menuDisplayed"/>

@@ -20,7 +20,7 @@
                 </ul>
             </Transition>
             <HeaderCompNavHover v-if="hovered" @hoveredToFalse="hovered=false" :links="links" :nav="nav"
-             class="hidden fixed md:flex flex-col items-center justify-start flex-wrap h-44 top-16 left-0 w-screen z-30 bg-lime-300 border-b-2 border-lime-700" />
+             class="hidden fixed md:flex flex-col items-center justify-start flex-wrap h-44 top-16 left-0 w-screen z-30 bg-lime-50 border-b-2 border-lime-700" />
         </nav>
     </Transition>
 </template>

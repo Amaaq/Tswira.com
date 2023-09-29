@@ -1,8 +1,13 @@
 <template>
-    <h1>
-        CATEGORIES PAGE
-        <router-view></router-view>
-    </h1>
+    <div class="h-screen flex justify-start items-center">
+        <h1>
+            CATEGORIES PAGE
+        </h1>
+        <hr>
+
+            <router-view></router-view>
+
+    </div>
     
 </template>
 
@@ -11,3 +16,6 @@ import { RouterView } from 'vue-router';
 
 
 </script>
+<style>
+
+</style>
