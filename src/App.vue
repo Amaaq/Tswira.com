@@ -18,12 +18,14 @@ import {RouterView} from 'vue-router'
   overflow-x: hidden;
   /* background-color: #d9f99d; */
   /* background-color: rgb(248, 235, 230); */
-  background-image: url('../assets/bg-image.jpg');
+  /* background-image: url('../assets/bg-image.jpg'); */
   background-size:cover;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  min-height: 97vh;
 }
-
+body {
+  background-color:#f7fee7;
+}
 h1 {
   min-height: inherit;
   font-weight: bolder;
