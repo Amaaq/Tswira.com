@@ -1,7 +1,7 @@
 <template>
     <Transition>
         <nav @mouseleave="hovered = false" class="absolute h-screen w-screen top-0 left-0 z-10 bg-lime-700 py-6
-         md:relative md:h-auto md:w-auto md:z-0 md:bg-transparent md:p-0 md:mr-auto md:self-stretch">
+         md:relative md:h-auto md:w-auto md:z-0 md:bg-transparent md:py-0 md:mr-auto md:flex md:items-stretch">
             <HeaderCompNavBackIcon v-if="menu.nav!=''" @click="ShowMobileSubList('')"
              class="cursor-pointer float-left ml-6 mb-10 p-1 box-content border-2 rounded-md border-lime-100 md:hidden hover:bg-lime-300"/>
             <HeaderCompNavCloseIcon @click="$emit('toggleMenuDisplay')" class="cursor-pointer float-right mr-6 mb-10 p-1
@@ -9,10 +9,10 @@
             <Transition :name="group">
             <ul  v-if="mount" class=" clear-right flex flex-col items-stretch justify-center text-center text-lime-100
             border-t-2 border-lime-100 md:flex-row md:border-none md:text-left md:gap-5 md:text-lime-800 
-             md:font-extrabold md:items-end md:h-full ">
+             md:font-extrabold ">
                  <RouterLink v-for="(link,index) in menu.links" @click="$emit('toggleMenuDisplay')"  @mouseover="ShowDesktopSubList(link)" :key="index" :to="`/${menu.nav}${link}`" 
                   class="relative p-5 border-b-2 border-lime-100 uppercase font-semibold tracking-widest cursor-pointer hover:text-lime-300
-                  md:p-3 md:hover:border-lime-600  md:border-transparent  md:hover:text-lime-800">
+                  md:p-3 md:hover:border-lime-600  md:border-transparent  md:hover:text-lime-800 md:flex md:items-center">
                      {{link}}
                      <HeaderCompNavPlusIcon v-show="link=='categories' || link=='products'" @click.stop="ShowMobileSubList(link)"
                      class=" h-16 absolute right-0 top-0 bottom-0 bg-lime-400 md:hidden"/>

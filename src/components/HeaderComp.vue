@@ -1,7 +1,7 @@
 <template>
-    <header class="absolute top-0 w-full px-5 md:px-10 h-16 flex items-center justify-between bg-transparent border-b-2 border-lime-700">
-        <HeaderCompHam @click="toggleMenuDisplay" class="cursor-pointer md:hidden"/>
-        <HeaderCompLogo class="md:mr-4 lg:mr-12"/>
+    <header class="absolute z-10 top-0 w-full px-5 md:px-10 h-16 flex items-stretch justify-between bg-opacity-70 bg-lime-100 border-b-2 border-lime-700">
+        <HeaderCompHam @click="toggleMenuDisplay" class="cursor-pointer md:hidden flex items-center"/>
+        <HeaderCompLogo class="md:mr-4 lg:mr-12 flex items-center" />
         <HeaderCompNav @toggleMenuDisplay="toggleMenuDisplay" v-show="menuDisplayed" :menuDisplayed="menuDisplayed"/>
         <HeaderCompUser v-if="user"/>
         <HeaderCompLogin v-else/>

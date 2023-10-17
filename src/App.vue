@@ -1,7 +1,7 @@
 <template>
   <HeaderComp />
   <Transition name="view">
-    <RouterView class=" flex items-center justify-center"/>
+    <RouterView/>
   </Transition>
 </template>
 
@@ -16,16 +16,10 @@ import {RouterView} from 'vue-router'
 @tailwind utilities;
 #app {
   overflow-x: hidden;
-  /* background-color: #d9f99d; */
-  /* background-color: rgb(248, 235, 230); */
-  /* background-image: url('../assets/bg-image.jpg'); */
-  background-size:cover;
-  background-repeat: no-repeat;
+  background-color:#f7fee7;
   min-height: 97vh;
 }
-body {
-  background-color:#f7fee7;
-}
+
 h1 {
   min-height: inherit;
   font-weight: bolder;
